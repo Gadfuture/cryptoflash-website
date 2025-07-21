@@ -2,80 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CryptoFlash - Flash USDT Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoFlash | Official Flash USDT Portal</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
+  <!-- Header -->
+  <header>
     <h1>CryptoFlash</h1>
     <nav>
-      <a href="#intro">Intro</a>
-      <a href="#faq">FAQs</a>
-      <a href="#generator">Flash Generator</a>
-      <a href="signup.html" class="btn">Sign Up</a>
-      <a href="login.html" class="btn">Login</a>
+      <a href="#signin">Sign In</a>
+      <a href="#signup">Sign Up</a>
     </nav>
   </header>
 
-  <!-- CryptoFlash Introduction -->
-  <section id="intro" class="section">
-    <h2>Introduction to Flash USDT</h2>
+  <!-- Introduction -->
+  <section class="intro">
+    <h2>What is Flash USDT?</h2>
     <p>
-      Flash USDT is a high-speed quantum cryptocurrency solution that allows for rapid transaction simulation and secure, blockchain-verified delivery. Designed for futuristic financial ecosystems, it enables clients to request tokens that simulate real-time USDT interactions on TRC20, ERC20, SOL, and BNB networks. Flash USDT is valid for 180 days and operates under a tiered pricing structure. The goal is to make crypto accessible, fast, and flexible for growing communities.
+      Flash USDT is a quantum cryptocurrency simulation designed to mimic the movement of large amounts of stablecoins such as USDT, USDC, and BUSD. Built on blockchain ecosystems like TRC20, ERC20, BEP20, and Solana, it serves institutions, traders, and individuals who require high-speed, temporary liquidity injections for demonstration or training purposes. Flash USDT is not meant for investment but educational or marketing simulation only. Every generation is valid for 180 days with traceable metadata and expiration checks.
     </p>
   </section>
 
-  <!-- Real Crypto Chart -->
-  <section class="section">
-    <h2>Live Crypto Prices</h2>
-    <iframe src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.html?coins=bitcoin,ethereum,tether,tron&locale=en" frameborder="0" width="100%" height="200"></iframe>
-  </section>
-
-  <!-- Generator Form -->
-  <section id="generator" class="section">
-    <h2>Generate Flash USDT</h2>
-    <form id="flashForm">
-      <input type="text" id="wallet" placeholder="Enter your Wallet Address" required />
-      <input type="number" id="amount" placeholder="Enter Amount (min $10,000)" required />
-      <button type="submit">Generate Flash</button>
-    </form>
-    <div id="status" style="display: none;">Processing... ⏳</div>
-  </section>
-
-  <!-- FAQs Section -->
-  <section id="faq" class="section">
-    <h2>Frequently Asked Questions</h2>
+  <!-- About Cryptos -->
+  <section class="about">
+    <h2>About Major Cryptocurrencies</h2>
     <ul>
-      <li><strong>What is Flash USDT?</strong> — A fast crypto token simulation valid for 180 days.</li>
-      <li><strong>How do I buy Flash?</strong> — Sign up, submit wallet & amount, pay via TRX.</li>
-      <li><strong>Is payment refundable?</strong> — No. Flash is a service product.</li>
-      <li><strong>What are the supported networks?</strong> — TRC20, ERC20, BEP20, SOL.</li>
+      <li><strong>Bitcoin (BTC):</strong> The original cryptocurrency, decentralized and scarce.</li>
+      <li><strong>Ethereum (ETH):</strong> Smart contracts and DeFi leader.</li>
+      <li><strong>TRON (TRX):</strong> Fast, cheap, and scalable network ideal for USDT.</li>
+      <li><strong>BNB:</strong> Powers Binance Chain and exchange ecosystem.</li>
     </ul>
   </section>
 
-  <!-- Floating Chat Buttons -->
-  <div class="chat-buttons">
-    <a href="https://wa.me/254798373493" target="_blank" class="chat whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/hitmangad" target="_blank" class="chat telegram">✈️ Telegram</a>
-  </div>
+  <!-- Real-time Crypto Chart -->
+  <section class="chart-section">
+    <h2>Live Crypto Prices</h2>
+    <iframe src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.html" frameborder="0" width="100%" height="200"></iframe>
+  </section>
+
+  <!-- Flash USDT Generator -->
+  <section class="generator">
+    <h2>Flash USDT Generator</h2>
+    <form id="flashForm">
+      <label>Amount (Minimum $10,000):</label>
+      <input type="number" min="10000" placeholder="Enter amount in USDT" required>
+      <button type="submit">Generate</button>
+    </form>
+    <div id="timerBox"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQs</h2>
+    <ul>
+      <li><strong>What is Flash USDT?</strong> A quantum simulation token with 180-day validity.</li>
+      <li><strong>Is it real money?</strong> No. It's a non-monetary blockchain simulation.</li>
+      <li><strong>How to get it?</strong> Sign up, pay the generation fee in TRX, and receive your Flash token.</li>
+    </ul>
+  </section>
+
+  <!-- Signup & Signin (UI only) -->
+  <section id="signup" class="form-section">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+  </section>
+
+  <section id="signin" class="form-section">
+    <h2>Sign In</h2>
+    <form>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 CryptoFlash. All rights reserved.</p>
+    <p>Send payment in TRX to: <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong></p>
+    <p>Send screenshot via WhatsApp or Telegram</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/254798373493" target="_blank">📱 WhatsApp</a>
+      <a href="https://t.me/hitmangad" target="_blank">💬 Telegram</a>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('flashForm').addEventListener('submit', function(e) {
+    const form = document.getElementById("flashForm");
+    const timerBox = document.getElementById("timerBox");
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      document.getElementById('status').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('status').textContent = '✅ Flash Generated! Check your email or contact us for delivery.';
-      }, 5000);
+      let timeLeft = 10;
+      timerBox.innerText = "Generating Flash USDT...";
+      const timer = setInterval(() => {
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          timerBox.innerText = "✅ Flash USDT successfully generated and will be valid for 180 days.";
+        } else {
+          timerBox.innerText = `Simulating... ${timeLeft}s`;
+        }
+        timeLeft--;
+      }, 1000);
     });
   </script>
-
 </body>
 </html>
