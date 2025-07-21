@@ -1,200 +1,106 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CryptoFlash USDT</title>
+  <title>CryptoFlash | Flash USDT</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
-    <h1>CryptoFlash</h1>
+    <div class="logo">CryptoFlash</div>
     <nav>
-      <a href="#signup">Sign Up</a>
-      <a href="#signin">Sign In</a>
+      <a href="#signin" class="btn">Sign In</a>
+      <a href="#signup" class="btn">Sign Up</a>
     </nav>
   </header>
 
-  <section id="intro">
-    <h2>Introduction to Flash USDT</h2>
-    <p>
-      Flash USDT is a revolutionary quantum cryptocurrency simulation project designed to give users a realistic experience of high-volume token generation. With Flash, users can request custom amounts of simulated USDT tokens for testing, education, and concept demonstration purposes. All Flash USDT tokens are validated for 180 days and are fully transferable for simulation across various wallet chains.
+  <section class="hero">
+    <h1>Welcome to CryptoFlash</h1>
+    <p>Flash USDT is a quantum cryptocurrency built for fast, secure, and smart global transactions.
+      It mimics real USDT tokens across chains like TRC20, ERC20, BNB, and Solana, offering real-looking transaction history for demonstration or simulation purposes.
     </p>
+    <a href="#generator" class="btn primary">Generate Flash USDT</a>
   </section>
 
   <section id="about">
-    <h2>About Cryptocurrency</h2>
-    <p>Cryptocurrency is a form of digital asset based on blockchain technology. Leading currencies include:</p>
-    <ul>
-      <li><strong>Bitcoin (BTC):</strong> The original cryptocurrency, ideal for store-of-value.</li>
-      <li><strong>Ethereum (ETH):</strong> Popular for smart contracts and DApps.</li>
-      <li><strong>Tron (TRX):</strong> Fast and efficient, used for decentralized content delivery.</li>
-      <li><strong>Tether (USDT):</strong> A stablecoin pegged to the US dollar, available on multiple blockchains.</li>
-    </ul>
+    <h2>About Cryptocurrencies</h2>
+    <p>Bitcoin (BTC), Ethereum (ETH), TRON (TRX), and other blockchains like BNB and Solana form the base of the crypto economy. With decentralized technology, transparency, and smart contracts, they offer financial freedom and programmable money.
+    </p>
+  </section>
+
+  <section id="crypto-graph">
+    <h2>Live Crypto Chart</h2>
+    <canvas id="priceChart" width="600" height="300"></canvas>
   </section>
 
   <section id="generator">
     <h2>Flash USDT Generator</h2>
     <form>
-      <label for="amount">Amount (USDT):</label>
-      <input type="number" id="amount" required />
-      <button type="button" onclick="startSimulation()">Generate Flash</button>
+      <input type="text" placeholder="Enter Wallet Address" required>
+      <select>
+        <option value="TRC20">TRC20</option>
+        <option value="ERC20">ERC20</option>
+        <option value="BEP20">BNB</option>
+        <option value="SOL">Solana</option>
+      </select>
+      <input type="number" placeholder="Amount in USDT" required>
+      <button type="submit">Start Generation</button>
     </form>
-    <div id="timer" style="display: none;">Generating...</div>
-  </section>
-
-  <section id="crypto-chart">
-    <h2>Live Crypto Prices</h2>
-    <canvas id="priceChart" width="400" height="200"></canvas>
+    <div id="countdown">Timer: <span>00:00</span></div>
   </section>
 
   <section id="faqs">
     <h2>FAQs</h2>
     <ul>
-      <li><strong>How long does Flash USDT last?</strong> 180 days from creation.</li>
-      <li><strong>Is Flash USDT real?</strong> Flash is a simulation used for testing and demonstration only.</li>
-      <li><strong>Can I send Flash to other wallets?</strong> Yes, Flash can be transferred for simulation purposes.</li>
-      <li><strong>How do I buy Flash USDT?</strong> Sign up, follow payment instructions, and upload proof of payment.</li>
+      <li><strong>What is Flash USDT?</strong> It is a demo token that mimics real USDT for display/testing.</li>
+      <li><strong>How long does it last?</strong> 180 days from generation.</li>
+      <li><strong>Is payment needed?</strong> Yes. $320 + 15% of amount. Pay in TRX.</li>
+      <li><strong>Where to send payment?</strong> To TRX: <code>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</code></li>
     </ul>
   </section>
 
-  <section id="signup">
-    <h2>Create Account</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Sign Up</button>
-    </form>
-  </section>
-
-  <section id="signin">
-    <h2>Login</h2>
-    <form>
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Sign In</button>
-    </form>
-  </section>
-
   <section id="contact">
-    <h2>Contact & Payments</h2>
-    <p>Pay in TRX to <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong></p>
-    <p>After payment, upload your proof (screenshot) to WhatsApp or Telegram below:</p>
-    <a href="https://wa.me/254798373493" class="social-button whatsapp">WhatsApp</a>
-    <a href="https://t.me/hitmangad" class="social-button telegram">Telegram</a>
+    <h2>Contact</h2>
+    <div class="social-buttons">
+      <a href="https://wa.me/254798373493" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/hitmangad" target="_blank" class="telegram-btn">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 CryptoFlash. All rights reserved.</p>
+    <p>&copy; 2025 CryptoFlash | crypto.flashtech@gmail.com</p>
   </footer>
 
   <script>
-    function startSimulation() {
-      const timer = document.getElementById('timer');
-      timer.style.display = 'block';
-      timer.innerText = 'Simulating Flash USDT...';
-      setTimeout(() => {
-        timer.innerText = 'Flash USDT Generation Complete!';
-      }, 5000);
-    }
-
-    const ctx = document.getElementById('priceChart').getContext('2d');
-    const chart = new Chart(ctx, {
+    // Sample Chart Data
+    const ctx = document.getElementById('priceChart');
+    new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['1am', '3am', '5am', '7am', '9am'],
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         datasets: [{
-          label: 'BTC Price ($)',
-          data: [31000, 31200, 31500, 31300, 31750],
-          borderColor: 'cyan',
-          tension: 0.4
+          label: 'BTC Price',
+          data: [30000, 30500, 31000, 30200, 30800, 31200, 32000],
+          borderColor: 'lime',
+          backgroundColor: 'rgba(0, 255, 0, 0.1)',
         }]
       },
       options: {
+        responsive: true,
         scales: {
-          y: { beginAtZero: false }
+          y: {
+            beginAtZero: false
+          }
         }
       }
     });
   </script>
 </body>
 </html>
-
-
-/* style.css */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: black;
-  color: white;
-  text-align: center;
-  line-height: 1.6;
-}
-
-header {
-  background: #111;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-}
-
-header h1 {
-  margin: 0;
-  color: cyan;
-}
-
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 2em;
-  border-bottom: 1px solid #222;
-}
-
-form input, form button {
-  padding: 0.6em;
-  margin: 0.5em;
-  border: none;
-  border-radius: 5px;
-}
-
-form button {
-  background: cyan;
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.social-button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  margin: 0.5em;
-  color: black;
-  background-color: cyan;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer {
-  background: #111;
-  padding: 1em;
-  margin-top: 2em;
-  color: #aaa;
-}
-
-canvas {
-  background-color: #222;
-  margin-top: 1em;
-  border-radius: 10px;
-}
