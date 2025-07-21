@@ -3,108 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CryptoFlash - Official Flash USDT</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="https://cryptoflash.tech/favicon.ico" />
+  <title>CryptoFlash - Flash USDT Generator</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <h1>CryptoFlash</h1>
-    <nav>
-      <button id="loginBtn">Login</button>
-      <button id="signupBtn">Sign Up</button>
-    </nav>
+    <h1>Welcome to CryptoFlash</h1>
+    <p>Get Flash USDT tokens that are swappable and transferable to all wallets.</p>
   </header>
 
-  <main>
-    <section id="intro">
-      <h2>Welcome to Flash USDT</h2>
-      <p>
-        Flash USDT is a decentralized quantum cryptocurrency that allows users to generate stable-value tokens backed by blockchain technology. With Flash, users enjoy lightning-fast transactions, seamless transfers, and enhanced security across TRC20, ERC20, and BEP20 chains. Designed to simplify the adoption of digital payments, Flash USDT supports TRX as its payment method. Users can request token generation and validation lasting 180 days. After sign-up, full pricing, buying instructions, and token validation are shared directly to the user. CryptoFlash ensures speed, anonymity, and efficiency — making it a preferred solution for users seeking flexibility and power.
-      </p>
-    </section>
+  <section class="generator">
+    <h2>Flash USDT Generator</h2>
+    <p>Minimum generation is <strong>10,000 Flash</strong>.</p>
+    <p>Generation Fee: <strong>$340</strong></p>
+    <p>After generating, send the payment screenshot to:</p>
+    <ul>
+      <li>📧 Email: <a href="mailto:crypto.flashtech@gmail.com">crypto.flashtech@gmail.com</a></li>
+      <li>📞 WhatsApp: <a href="https://wa.me/254798373493" target="_blank">+254 798 373 493</a></li>
+      <li>📢 Telegram: <a href="https://t.me/hitmangad" target="_blank">@hitmangad</a></li>
+    </ul>
+    <p>After receiving and confirming the Flash, you’ll pay 15% of the amount.</p>
+    <p>Payment Method: <strong>TRX only</strong></p>
+    <p>TRX Address: <code>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</code></p>
 
-    <section id="about-crypto">
-      <h2>About Cryptocurrencies</h2>
-      <p>
-        Bitcoin (BTC) is the pioneer of decentralized digital currency. Ethereum (ETH) introduced smart contracts for programmable finance. TRON (TRX) offers fast, low-cost transactions across decentralized apps. Flash USDT builds on these foundations, delivering rapid, verified, short-term tokens on multiple networks.
-      </p>
-    </section>
-
-    <section id="generator">
-      <h2>Flash USDT Generator</h2>
-      <p>Set your generation amount and click generate:</p>
-      <input type="number" id="amount" placeholder="Enter amount (e.g. 10000)" />
-      <button onclick="startGeneration()">Generate Flash USDT</button>
-      <div id="countdown" style="display:none;"></div>
-    </section>
-
-    <section id="faqs">
-      <h2>FAQs</h2>
-      <ul>
-        <li>💰 Minimum generation: $10,000</li>
-        <li>⚙️ Generation fee: $320 in TRX</li>
-        <li>🔐 Flash tokens valid for 180 days</li>
-        <li>📞 Contact via WhatsApp or Telegram after login</li>
-        <li>🧾 Screenshot upload after payment for confirmation</li>
-      </ul>
-    </section>
-
-    <section id="crypto-icons">
-      <img src="https://cryptoflash.tech/icons/btc.png" alt="BTC" />
-      <img src="https://cryptoflash.tech/icons/eth.png" alt="ETH" />
-      <img src="https://cryptoflash.tech/icons/trx.png" alt="TRX" />
-      <img src="https://cryptoflash.tech/icons/usdt.png" alt="USDT" />
-    </section>
-
-    <section id="contact">
-      <a href="https://wa.me/254798373493" target="_blank" class="btn green">💬 WhatsApp</a>
-      <a href="https://t.me/hitmangad" target="_blank" class="btn blue">📩 Telegram</a>
-    </section>
-  </main>
-
-  <!-- SignUp/Login Modals -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h3>Sign In / Sign Up</h3>
-      <input type="text" id="username" placeholder="Your Name or Email" />
-      <button onclick="completeLogin()">Continue</button>
+    <div class="timer">
+      <p>Generating Flash...</p>
+      <div id="countdown">10</div>
     </div>
-  </div>
+  </section>
+
+  <section class="faq">
+    <h2>FAQs</h2>
+    <p>✅ Available Flash Tokens and Coins:</p>
+    <ul>
+      <li>USDT TRC20</li>
+      <li>USDT ERC20</li>
+      <li>USDT SOL</li>
+      <li>USDT BNB</li>
+      <li>BTC</li>
+      <li>BTCBR</li>
+      <li>BEP20</li>
+      <li>Teller BEP20</li>
+      <li>USDT.z</li>
+    </ul>
+    <p>✅ All tokens are valid for <strong>180 days</strong>.</p>
+    <p>For more info, contact us on our socials.</p>
+  </section>
+
+  <section class="flyer">
+    <h2>Official CryptoFlash Flyer</h2>
+    <img src="flyer.png" alt="CryptoFlash Flyer" style="width:100%;max-width:800px;border-radius:10px;display:block;margin:auto;" />
+  </section>
+
+  <footer>
+    <p>© 2025 CryptoFlash | Contact: crypto.flashtech@gmail.com</p>
+  </footer>
 
   <script>
-    const modal = document.getElementById("modal");
-    document.getElementById("loginBtn").onclick = () => modal.classList.remove("hidden");
-    document.getElementById("signupBtn").onclick = () => modal.classList.remove("hidden");
-    document.getElementById("closeModal").onclick = () => modal.classList.add("hidden");
-
-    function completeLogin() {
-      alert("Welcome! Now contact us via WhatsApp or Telegram to complete your Flash USDT purchase.");
-      modal.classList.add("hidden");
-    }
-
-    function startGeneration() {
-      const amount = document.getElementById("amount").value;
-      if (!amount || isNaN(amount) || amount < 10000) {
-        alert("Minimum generation amount is $10,000.");
-        return;
+    let countdown = 10;
+    const countdownElement = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      countdown--;
+      countdownElement.textContent = countdown;
+      if (countdown === 0) {
+        clearInterval(timer);
+        countdownElement.textContent = "Done! Contact us to receive your Flash.";
       }
-
-      const countdown = document.getElementById("countdown");
-      countdown.style.display = "block";
-      let time = 30;
-      countdown.innerText = `Generating $${amount}... Please wait ${time}s`;
-
-      const interval = setInterval(() => {
-        time--;
-        countdown.innerText = `Generating $${amount}... Please wait ${time}s`;
-        if (time === 0) {
-          clearInterval(interval);
-          countdown.innerHTML = `✅ Flash USDT of $${amount} ready!<br>Please send screenshot of your TRX payment to <b>+254798373493</b> (WhatsApp).`;
-        }
-      }, 1000);
-    }
+    }, 1000);
   </script>
 </body>
 </html>
