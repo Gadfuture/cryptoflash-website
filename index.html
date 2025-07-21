@@ -1,75 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CryptoFlash - Flash USDT Generator</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto FlashTech - Flash USDT Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to CryptoFlash</h1>
-    <p>Get Flash USDT tokens that are swappable and transferable to all wallets.</p>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">Crypto FlashTech</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Flash USDT</a></li>
+                <li><a href="#future">Future of Crypto</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="generator">
-    <h2>Flash USDT Generator</h2>
-    <p>Minimum generation is <strong>10,000 Flash</strong>.</p>
-    <p>Generation Fee: <strong>$340</strong></p>
-    <p>After generating, send the payment screenshot to:</p>
-    <ul>
-      <li>📧 Email: <a href="mailto:crypto.flashtech@gmail.com">crypto.flashtech@gmail.com</a></li>
-      <li>📞 WhatsApp: <a href="https://wa.me/254798373493" target="_blank">+254 798 373 493</a></li>
-      <li>📢 Telegram: <a href="https://t.me/hitmangad" target="_blank">@hitmangad</a></li>
-    </ul>
-    <p>After receiving and confirming the Flash, you’ll pay 15% of the amount.</p>
-    <p>Payment Method: <strong>TRX only</strong></p>
-    <p>TRX Address: <code>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</code></p>
+    <section id="home" class="hero">
+        <h1>Welcome to Crypto FlashTech</h1>
+        <p>Your trusted platform for generating Flash USDT under original contracts.</p>
+        <a href="#generator" class="cta-button">Generate Flash USDT</a>
+        <div class="floating-icons">
+            <i class="fab fa-bitcoin"></i>
+            <i class="fab fa-ethereum"></i>
+            <i class="fab fa-btc"></i>
+            <i class="fas fa-coins"></i>
+        </div>
+    </section>
 
-    <div class="timer">
-      <p>Generating Flash...</p>
-      <div id="countdown">10</div>
-    </div>
-  </section>
+    <section id="about">
+        <h2>About Flash USDT</h2>
+        <p>Crypto FlashTech is a cutting-edge platform specializing in Flash USDT generation, a revolutionary approach to cryptocurrency transactions. Flash USDT is a unique, time-limited digital asset designed for secure, fast, and reliable transfers across blockchain networks. All Flash USDT tokens generated through our platform are issued under original contracts, ensuring authenticity and compliance with blockchain standards. Our service allows users to generate USDT on TRC20, ERC20, Solana, BNB, and BEP20 networks, as well as BTCBR on BEP20, with a validity period of 180 days. The minimum generation fee is $10,000, requiring an upfront payment of $320, followed by a 15% fee upon confirmation. Our platform prioritizes security, transparency, and user satisfaction, making it ideal for traders, investors, and crypto enthusiasts. With Flash USDT, you can execute seamless transactions with confidence, backed by our robust infrastructure and dedicated support team. Join the future of crypto with Crypto FlashTech and experience unparalleled efficiency in digital asset management.</p>
+    </section>
 
-  <section class="faq">
-    <h2>FAQs</h2>
-    <p>✅ Available Flash Tokens and Coins:</p>
-    <ul>
-      <li>USDT TRC20</li>
-      <li>USDT ERC20</li>
-      <li>USDT SOL</li>
-      <li>USDT BNB</li>
-      <li>BTC</li>
-      <li>BTCBR</li>
-      <li>BEP20</li>
-      <li>Teller BEP20</li>
-      <li>USDT.z</li>
-    </ul>
-    <p>✅ All tokens are valid for <strong>180 days</strong>.</p>
-    <p>For more info, contact us on our socials.</p>
-  </section>
+    <section id="future">
+        <h2>Future of Cryptocurrency</h2>
+        <p>The cryptocurrency landscape is evolving rapidly, with 2025 poised to be a transformative year. Decentralized finance (DeFi) and stablecoins like USDT are driving mainstream adoption, offering stability and scalability. Flash USDT, with its time-bound validity, is set to redefine transactional efficiency in trading and remittances. Blockchain interoperability and layer-2 solutions will enhance transaction speeds and reduce costs, making crypto more accessible. Additionally, advancements in quantum-resistant cryptography will bolster security, ensuring trust in digital assets. As regulatory frameworks mature, expect increased institutional investment, further legitimizing the market. Crypto FlashTech is at the forefront, leveraging these trends to deliver innovative solutions for the future.</p>
+    </section>
 
-  <section class="flyer">
-    <h2>Official CryptoFlash Flyer</h2>
-    <img src="flyer.png" alt="CryptoFlash Flyer" style="width:100%;max-width:800px;border-radius:10px;display:block;margin:auto;" />
-  </section>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What is the minimum generation fee?</h3>
+            <p>The minimum generation fee for Flash USDT is $10,000.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How much is the initial payment?</h3>
+            <p>Clients are required to pay $320 to generate Flash USDT.</p>
+        </div>
+        <div class="faq-item">
+            <h3What is the confirmation fee?</h3>
+            <p>After confirmation, clients pay a 15% fee.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long are Flash tokens valid?</h3>
+            <p>Flash tokens are valid for 180 days.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Which tokens can be generated?</h3>
+            <p>We support USDT on TRC20, ERC20, Solana, BNB, and BEP20, as well as BTCBR on BEP20.</p>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 CryptoFlash | Contact: crypto.flashtech@gmail.com</p>
-  </footer>
+    <section id="generator">
+        <h2>Flash USDT Generator</h2>
+        <p>Confirm your generating fee on WhatsApp to start generating Flash USDT.</p>
+        <div id="timer">30:00</div>
+        <a href="https://wa.me/+25498373493?text=Confirming%20generating%20fee%20for%20Flash%20USDT" target="_blank" class="cta-button">Confirm on WhatsApp</a>
+    </section>
 
-  <script>
-    let countdown = 10;
-    const countdownElement = document.getElementById("countdown");
-    const timer = setInterval(() => {
-      countdown--;
-      countdownElement.textContent = countdown;
-      if (countdown === 0) {
-        clearInterval(timer);
-        countdownElement.textContent = "Done! Contact us to receive your Flash.";
-      }
-    }, 1000);
-  </script>
+    <section id="chart">
+        <h2>Cryptocurrency Market Trends</h2>
+        <canvas id="cryptoChart"></canvas>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for support or inquiries:</p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/+25498373493" target="_blank" class="contact-button whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://t.me/hitmangad" target="_blank" class="contact-button telegram"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="mailto:crypto.flashtech@gmail.com" class="contact-button email"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+        <p>After payment via TRX to <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong>, send a screenshot for confirmation to our email or WhatsApp.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Crypto FlashTech. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Timer for Flash USDT Generator
+        let timeLeft = 1800; // 30 minutes in seconds
+        const timerElement = document.getElementById('timer');
+        const timer = setInterval(() => {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            timeLeft--;
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                timerElement.textContent = 'Time Expired';
+            }
+        }, 1000);
+
+        // Chart.js for crypto price trends
+        const ctx = document.getElementById('cryptoChart').getContext('2d');
+        const cryptoChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'USDT Price (USD)',
+                    data: [1.00, 1.01, 0.99, 1.00, 1.02, 1.01],
+                    borderColor: '#00ff88',
+                    backgroundColor: 'rgba(0, 255, 136, 0.2)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Price (USD)',
+                            color: '#fff'
+                        },
+                        ticks: { color: '#fff' }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month',
+                            color: '#fff'
+                        },
+                        ticks: { color: '#fff' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#fff' } }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
