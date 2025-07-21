@@ -14,7 +14,6 @@
             <div class="logo">Crypto FlashTech</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Flash USDT</a></li>
                 <li><a href="#future">Future of Crypto</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -23,8 +22,8 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Introducing Crypto FlashTech</h1>
-        <p>Welcome to Crypto FlashTech, the premier platform for generating Flash USDT under original blockchain contracts. Experience cutting-edge technology designed for secure, rapid, and reliable cryptocurrency transactions.</p>
+        <h1>Introducing Flash USDT by Crypto FlashTech</h1>
+        <p>Crypto FlashTech pioneers Flash USDT generation, offering a revolutionary approach to cryptocurrency transactions. Flash USDT is a time-limited digital asset designed for secure, fast, and reliable transfers across blockchain networks. Issued under original contracts, our tokens ensure authenticity and compliance. Generate USDT on TRC20, ERC20, Solana, BNB, and BEP20 networks, or BTCBR on BEP20, with a 180-day validity. With a minimum generation fee of $10,000, an upfront payment of $320, and a 15% confirmation fee, our platform guarantees security and transparency for traders and investors.</p>
         <a href="#generator" class="cta-button">Generate Flash USDT Now</a>
         <div class="floating-icons">
             <i class="fab quan fa-bitcoin"></i>
@@ -32,11 +31,6 @@
             <i class="fab quan fa-btc"></i>
             <i class="fas quan fa-coins"></i>
         </div>
-    </section>
-
-    <section id="about">
-        <h2>About Flash USDT</h2>
-        <p>Crypto FlashTech is a cutting-edge platform specializing in Flash USDT generation, a revolutionary approach to cryptocurrency transactions. Flash USDT is a unique, time-limited digital asset designed for secure, fast, and reliable transfers across blockchain networks. All Flash USDT tokens generated through our platform are issued under original contracts, ensuring authenticity and compliance with blockchain standards. Our service allows users to generate USDT on TRC20, ERC20, Solana, BNB, and BEP20 networks, as well as BTCBR on BEP20, with a validity period of 180 days. The minimum generation fee is $10,000, requiring an upfront payment of $320, followed by a 15% fee upon confirmation. Our platform prioritizes security, transparency, and user satisfaction, making it ideal for traders, investors, and crypto enthusiasts. With Flash USDT, you can execute seamless transactions with confidence, backed by our robust infrastructure and dedicated support team. Join the future of crypto with Crypto FlashTech and experience unparalleled efficiency in digital asset management.</p>
     </section>
 
     <section id="future">
@@ -70,9 +64,9 @@
 
     <section id="generator">
         <h2>Flash USDT Generator</h2>
-        <p>Confirm your generating fee on WhatsApp to start generating Flash USDT.</p>
+        <p id="generator-message">Confirm your generating fee on WhatsApp to start generating Flash USDT.</p>
         <div id="timer">30:00</div>
-        <a href="https://wa.me/+25498373493?text=Confirming%20generating%20fee%20for%20Flash%20USDT" target="_blank" class="cta-button">Confirm on WhatsApp</a>
+        <a href="https://wa.me/+25498373493?text=Confirming%20generating%20fee%20for%20Flash%20USDT" target="_blank" class="cta-button" id="generate-button">Generate Now</a>
     </section>
 
     <section id="chart">
@@ -95,10 +89,19 @@
         <p>© 2025 Crypto FlashTech. All rights reserved.</p>
     </footer>
 
+    <div class="global-floating-icons">
+        <i class="fab quan fa-bitcoin"></i>
+        <i class="fab quan fa-ethereum"></i>
+        <i class="fab quan fa-btc"></i>
+        <i class="fas quan fa-coins"></i>
+    </div>
+
     <script>
         // Timer for Flash USDT Generator
         let timeLeft = 1800; // 30 minutes in seconds
         const timerElement = document.getElementById('timer');
+        const generatorMessage = document.getElementById('generator-message');
+        const generateButton = document.getElementById('generate-button');
         const timer = setInterval(() => {
             let minutes = Math.floor(timeLeft / 60);
             let seconds = timeLeft % 60;
@@ -109,6 +112,11 @@
                 timerElement.textContent = 'Time Expired';
             }
         }, 1000);
+
+        // Update message on button click
+        generateButton.addEventListener('click', () => {
+            generatorMessage.textContent = 'Confirm generating payment, send the screenshot to WhatsApp or email, and your address.';
+        });
 
         // Chart.js for crypto price trends
         const ctx = document.getElementById('cryptoChart').getContext('2d');
