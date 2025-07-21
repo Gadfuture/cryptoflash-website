@@ -1,112 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CryptoFlash Official</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-  <header>
-    <div class="logo">CryptoFlash</div>
-    <nav>
-      <a href="#intro">Introduction</a>
-      <a href="#about">About Crypto</a>
-      <a href="#faq">FAQs</a>
-    </nav>
-    <div class="auth-buttons">
-      <button onclick="openForm('signup')">Sign Up</button>
-      <button onclick="openForm('signin')">Sign In</button>
-    </div>
-  </header>
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #f2f2f2;
+  text-align: center;
+}
 
-  <section id="intro">
-    <h1>Welcome to Flash USDT</h1>
-    <p>
-      Flash USDT is a quantum-enhanced cryptocurrency experience designed to offer users fast, flexible, and smart access to digital assets across TRC20, ERC20, BEP20, and SOL networks. Flash USDT gives users the ability to simulate wealth using an AI-guided token engine with an intelligent generation system that is fully validated for 180 days. Buy, track, and interact with crypto using powerful tools available on CryptoFlash.
-    </p>
-  </section>
+header {
+  background: #1e1e1e;
+  padding: 30px 10px;
+  box-shadow: 0 0 20px #0ff;
+}
 
-  <section id="about">
-    <h2>About Major Cryptocurrencies</h2>
-    <ul>
-      <li><strong>Bitcoin (BTC)</strong> – The first and most widely used decentralized digital currency.</li>
-      <li><strong>Ethereum (ETH)</strong> – A programmable blockchain enabling smart contracts and DApps.</li>
-      <li><strong>TRON (TRX)</strong> – High-speed blockchain ideal for entertainment and payments.</li>
-      <li><strong>USDT</strong> – Stablecoin pegged to the US Dollar across multiple networks.</li>
-    </ul>
-  </section>
+h1 {
+  font-size: 2.5rem;
+  color: #0ff;
+}
 
-  <section id="chart">
-    <h2>Live Crypto Prices</h2>
-    <iframe src="https://www.tradingview.com/widgetembed/?frameElementId=tradingview_efb8d&symbol=BINANCE:BTCUSDT&interval=30&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=[]&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1&studies_overrides={}&overrides={}&enabled_features=[]&disabled_features=[]&locale=en" width="100%" height="400" frameborder="0"></iframe>
-  </section>
+.generator, .faq, .flyer {
+  padding: 30px 15px;
+  border-bottom: 1px solid #333;
+}
 
-  <section id="generator">
-    <h2>Flash USDT Generator</h2>
-    <form id="gen-form">
-      <input type="number" placeholder="Enter Amount (Minimum $10,000)" required>
-      <button type="submit">Generate</button>
-    </form>
-    <p id="result"></p>
-  </section>
+h2 {
+  color: #ff0;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
-  <section id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <ul>
-      <li><strong>What is Flash USDT?</strong><br>It is a token simulation system for large digital fund operations validated for 180 days.</li>
-      <li><strong>How do I receive tokens?</strong><br>Make a TRX payment and upload your screenshot after logging in.</li>
-      <li><strong>Which wallets are supported?</strong><br>TRONLink, Trust Wallet, and all ERC/BEP wallets.</li>
-    </ul>
-  </section>
+p, ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-  <footer>
-    <p>Contact: <a href="mailto:crypto.flashtech@gmail.com">crypto.flashtech@gmail.com</a> | <a href="https://t.me/hitmangad">Telegram</a> | <a href="https://wa.me/254798373493">WhatsApp</a></p>
-    <p>All rights reserved © 2025 CryptoFlash</p>
-  </footer>
+ul {
+  list-style: none;
+  padding: 0;
+}
 
-  <!-- Floating chat buttons -->
-  <div class="floating-buttons">
-    <a href="https://wa.me/254798373493" target="_blank" class="whatsapp">WhatsApp</a>
-    <a href="https://t.me/hitmangad" target="_blank" class="telegram">Telegram</a>
-  </div>
+ul li::before {
+  content: "✔ ";
+  color: lime;
+}
 
-  <!-- Auth forms -->
-  <div id="auth-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeForm()">&times;</span>
-      <form id="signup-form" class="auth-form hidden">
-        <h3>Sign Up</h3>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-      </form>
-      <form id="signin-form" class="auth-form hidden">
-        <h3>Sign In</h3>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </div>
+.wallet {
+  background: #222;
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid lime;
+  color: lime;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 5px;
+}
 
-  <script>
-    function openForm(type) {
-      document.getElementById('auth-modal').style.display = 'block';
-      document.getElementById('signup-form').classList.add('hidden');
-      document.getElementById('signin-form').classList.add('hidden');
-      document.getElementById(`${type}-form`).classList.remove('hidden');
-    }
-    function closeForm() {
-      document.getElementById('auth-modal').style.display = 'none';
-    }
+.timer {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #0f0;
+  animation: pulse 1s infinite;
+}
 
-    document.getElementById('gen-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('result').textContent = 'Success! Contact crypto.flashtech@gmail.com or WhatsApp to complete your request.';
-    });
-  </script>
-</body>
-</html>
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+footer {
+  background: #000;
+  color: #aaa;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ff;
+  margin-top: 10px;
+}
