@@ -1,49 +1,100 @@
-/* Floating Chat Buttons */
-.chat-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 999;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #f0f0f0;
+  line-height: 1.6;
 }
 
-.chat {
-  padding: 10px 15px;
-  background-color: #0d1117;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
+header {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #333;
+}
+
+header h1 {
+  color: #0ff;
   font-weight: bold;
-  border: 2px solid #39ff14;
-  transition: 0.3s ease;
 }
 
-.chat:hover {
-  background-color: #39ff14;
-  color: black;
+nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  border: 1px solid #0ff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
-/* Generator Section */
-#generator form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+nav a:hover {
+  background: #0ff;
+  color: #000;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.intro h2, .about h2, .faq h2, .chart-section h2, .generator h2 {
+  color: #00f7ff;
+  text-align: center;
+}
+
+ul {
+  list-style: circle;
+}
+
+.form-section form {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
   max-width: 400px;
   margin: auto;
 }
 
-#generator input, #generator button {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 8px;
+input, button {
+  padding: 0.75rem;
   border: none;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-#generator button {
-  background-color: #39ff14;
-  color: black;
+button {
+  background: #0ff;
+  color: #000;
   cursor: pointer;
+}
+
+button:hover {
+  background: #00ccff;
+}
+
+#timerBox {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #0f0;
+}
+
+footer {
+  background: #111;
+  padding: 2rem;
+  text-align: center;
+  color: #999;
+  border-top: 2px solid #222;
+}
+
+.contact-btns a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #0ff;
   font-weight: bold;
 }
