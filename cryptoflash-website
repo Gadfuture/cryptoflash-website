@@ -1,171 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CryptoFlash - Official Site</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoFlash Official</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <header>
     <div class="logo">CryptoFlash</div>
     <nav>
-      <button id="loginBtn">Sign In</button>
-      <button id="signupBtn">Sign Up</button>
+      <a href="#intro">Introduction</a>
+      <a href="#about">About Crypto</a>
+      <a href="#faq">FAQs</a>
     </nav>
+    <div class="auth-buttons">
+      <button onclick="openForm('signup')">Sign Up</button>
+      <button onclick="openForm('signin')">Sign In</button>
+    </div>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>Welcome to CryptoFlash</h1>
-      <p>
-        CryptoFlash is a cutting-edge digital platform offering Flash USDT, a quantum-powered cryptocurrency token supported across major blockchains such as TRC20, ERC20, BEP20, and SOL. Our platform is designed to help users seamlessly acquire and manage their Flash tokens, supported with validation for up to 180 days. Experience secure and high-speed transactions with CryptoFlash, and join a growing ecosystem of decentralized finance innovation.
-      </p>
-    </section>
+  <section id="intro">
+    <h1>Welcome to Flash USDT</h1>
+    <p>
+      Flash USDT is a quantum-enhanced cryptocurrency experience designed to offer users fast, flexible, and smart access to digital assets across TRC20, ERC20, BEP20, and SOL networks. Flash USDT gives users the ability to simulate wealth using an AI-guided token engine with an intelligent generation system that is fully validated for 180 days. Buy, track, and interact with crypto using powerful tools available on CryptoFlash.
+    </p>
+  </section>
 
-    <section class="about-crypto">
-      <h2>About Major Cryptocurrencies</h2>
-      <ul>
-        <li><strong>Bitcoin (BTC):</strong> The original cryptocurrency and digital gold.</li>
-        <li><strong>Ethereum (ETH):</strong> Powering smart contracts and dApps.</li>
-        <li><strong>Tron (TRX):</strong> High-speed blockchain for decentralized apps.</li>
-        <li><strong>Tether (USDT):</strong> Stablecoin used for cross-border payments.</li>
-      </ul>
-    </section>
+  <section id="about">
+    <h2>About Major Cryptocurrencies</h2>
+    <ul>
+      <li><strong>Bitcoin (BTC)</strong> – The first and most widely used decentralized digital currency.</li>
+      <li><strong>Ethereum (ETH)</strong> – A programmable blockchain enabling smart contracts and DApps.</li>
+      <li><strong>TRON (TRX)</strong> – High-speed blockchain ideal for entertainment and payments.</li>
+      <li><strong>USDT</strong> – Stablecoin pegged to the US Dollar across multiple networks.</li>
+    </ul>
+  </section>
 
-    <section class="chart-section">
-      <h2>Live Crypto Price Chart</h2>
-      <canvas id="priceChart"></canvas>
-    </section>
+  <section id="chart">
+    <h2>Live Crypto Prices</h2>
+    <iframe src="https://www.tradingview.com/widgetembed/?frameElementId=tradingview_efb8d&symbol=BINANCE:BTCUSDT&interval=30&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=[]&theme=dark&style=1&timezone=Etc/UTC&withdateranges=1&hideideas=1&studies_overrides={}&overrides={}&enabled_features=[]&disabled_features=[]&locale=en" width="100%" height="400" frameborder="0"></iframe>
+  </section>
 
-    <section class="flash-generator">
-      <h2>Generate Flash USDT</h2>
-      <form id="flashForm">
-        <input type="number" id="amount" placeholder="Enter amount" required />
-        <button type="submit">Generate</button>
-      </form>
-      <div id="timer"></div>
-    </section>
+  <section id="generator">
+    <h2>Flash USDT Generator</h2>
+    <form id="gen-form">
+      <input type="number" placeholder="Enter Amount (Minimum $10,000)" required>
+      <button type="submit">Generate</button>
+    </form>
+    <p id="result"></p>
+  </section>
 
-    <section class="pricing">
-      <h2>Pricing & Payment Instructions</h2>
-      <p>Generation fee: <strong>$320</strong><br />
-        Minimum generation: <strong>$10,000</strong><br />
-        Client pays: <strong>15%</strong> of total amount<br />
-        Send TRX to: <strong>TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy</strong><br />
-        Upload payment screenshot after generation
-      </p>
-    </section>
-
-    <section class="faqs">
-      <h2>FAQs</h2>
-      <ul>
-        <li><strong>What is Flash USDT?</strong> Flash USDT is a simulated digital currency you can buy on-demand.</li>
-        <li><strong>How long is validation?</strong> All Flash USDT is valid for 180 days.</li>
-        <li><strong>Can I use Flash USDT to trade?</strong> Yes, it’s usable in wallets and dApps as a proof-of-funds token.</li>
-      </ul>
-    </section>
-  </main>
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>What is Flash USDT?</strong><br>It is a token simulation system for large digital fund operations validated for 180 days.</li>
+      <li><strong>How do I receive tokens?</strong><br>Make a TRX payment and upload your screenshot after logging in.</li>
+      <li><strong>Which wallets are supported?</strong><br>TRONLink, Trust Wallet, and all ERC/BEP wallets.</li>
+    </ul>
+  </section>
 
   <footer>
-    <div class="floating-icons">
-      <img src="https://cryptoflash-icons.netlify.app/btc.png" alt="BTC" />
-      <img src="https://cryptoflash-icons.netlify.app/eth.png" alt="ETH" />
-      <img src="https://cryptoflash-icons.netlify.app/trx.png" alt="TRX" />
-      <img src="https://cryptoflash-icons.netlify.app/usdt.png" alt="USDT" />
-    </div>
-    <div class="contact-buttons">
-      <a href="https://wa.me/254798373493" class="whatsapp-btn" target="_blank">WhatsApp</a>
-      <a href="https://t.me/hitmangad" class="telegram-btn" target="_blank">Telegram</a>
-    </div>
-    <p>&copy; 2025 CryptoFlash. All rights reserved.</p>
+    <p>Contact: <a href="mailto:crypto.flashtech@gmail.com">crypto.flashtech@gmail.com</a> | <a href="https://t.me/hitmangad">Telegram</a> | <a href="https://wa.me/254798373493">WhatsApp</a></p>
+    <p>All rights reserved © 2025 CryptoFlash</p>
   </footer>
 
-  <!-- Modals for Sign In / Sign Up -->
-  <div id="authModal" class="modal">
+  <!-- Floating chat buttons -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/254798373493" target="_blank" class="whatsapp">WhatsApp</a>
+    <a href="https://t.me/hitmangad" target="_blank" class="telegram">Telegram</a>
+  </div>
+
+  <!-- Auth forms -->
+  <div id="auth-modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="authTitle"></h2>
-      <form id="authForm">
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit">Continue</button>
+      <span class="close" onclick="closeForm()">&times;</span>
+      <form id="signup-form" class="auth-form hidden">
+        <h3>Sign Up</h3>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+      <form id="signin-form" class="auth-form hidden">
+        <h3>Sign In</h3>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
       </form>
     </div>
   </div>
 
   <script>
-    // Chart.js demo chart
-    const ctx = document.getElementById('priceChart');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        datasets: [{
-          label: 'BTC Price',
-          data: [48000, 48250, 47900, 48500, 48700, 49000],
-          borderColor: '#00ff99',
-          backgroundColor: 'transparent'
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { labels: { color: '#fff' } }
-        },
-        scales: {
-          x: { ticks: { color: '#ccc' } },
-          y: { ticks: { color: '#ccc' } }
-        }
-      }
-    });
+    function openForm(type) {
+      document.getElementById('auth-modal').style.display = 'block';
+      document.getElementById('signup-form').classList.add('hidden');
+      document.getElementById('signin-form').classList.add('hidden');
+      document.getElementById(`${type}-form`).classList.remove('hidden');
+    }
+    function closeForm() {
+      document.getElementById('auth-modal').style.display = 'none';
+    }
 
-    // Auth modal
-    const loginBtn = document.getElementById('loginBtn');
-    const signupBtn = document.getElementById('signupBtn');
-    const modal = document.getElementById('authModal');
-    const authTitle = document.getElementById('authTitle');
-    const closeModal = document.querySelector('.close');
-
-    loginBtn.onclick = () => {
-      modal.style.display = 'block';
-      authTitle.textContent = 'Sign In';
-    };
-    signupBtn.onclick = () => {
-      modal.style.display = 'block';
-      authTitle.textContent = 'Sign Up';
-    };
-    closeModal.onclick = () => {
-      modal.style.display = 'none';
-    };
-
-    // Flash generator form with timer and email send
-    document.getElementById('flashForm').onsubmit = function (e) {
+    document.getElementById('gen-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const amount = document.getElementById('amount').value;
-      const timerEl = document.getElementById('timer');
-      let seconds = 10;
-      timerEl.innerHTML = 'Generating in ' + seconds + 's...';
-      const interval = setInterval(() => {
-        seconds--;
-        timerEl.innerHTML = 'Generating in ' + seconds + 's...';
-        if (seconds === 0) {
-          clearInterval(interval);
-          timerEl.innerHTML = 'Flash USDT Generated Successfully! Check your email.';
-
-          // Email logic
-          Email.send({
-            SecureToken: "your-secure-token-here",
-            To: "crypto.flashtech@gmail.com",
-            From: "your-email@gmail.com",
-            Subject: "Flash USDT Generator Request",
-            Body: `A user generated Flash USDT for amount: $${amount}.\nAsk them to pay via TRX to TRvTQZst7iGF2DCCbhe5YKh1sNaaPqVVCy.`
-          }).then((message) => alert("Details sent to CryptoFlash support. Contact via WhatsApp or Telegram."));
-        }
-      }, 1000);
-    };
+      document.getElementById('result').textContent = 'Success! Contact crypto.flashtech@gmail.com or WhatsApp to complete your request.';
+    });
   </script>
 </body>
 </html>
